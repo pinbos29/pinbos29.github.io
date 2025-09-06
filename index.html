@@ -1,70 +1,59 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RexIT - Expert IT Consulting Services</title>
+    <title>RexIT - Expert IT Consulting</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='15' fill='%232A3D66'/%3E%3Ctext x='50' y='75' font-size='70' font-family='Arial, sans-serif' font-weight='bold' fill='%23FFFFFF' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                },
-            },
-        };
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <style>
-        /* Small additions for better visual appeal */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
         .hero-bg {
-            background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
         }
     </style>
 </head>
-
-<body class="bg-gray-50 text-gray-800 antialiased">
+<body class="bg-gray-50 text-gray-800">
 
     <!-- Header & Navigation -->
-    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+    <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-gray-900">RexIT</a>
-            <div class="hidden md:flex items-center space-x-8">
+            <a href="#" class="text-2xl font-bold text-blue-800">RexIT</a>
+            <div class="hidden md:flex space-x-6 items-center">
                 <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-300">Who We Are</a>
                 <a href="#services" class="text-gray-600 hover:text-blue-600 transition duration-300">Services</a>
-                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition duration-300">Contact</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition duration-300">Testimonials</a>
+                <a href="#contact" class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">Get In Touch</a>
             </div>
-            <a href="#contact" class="hidden md:inline-block bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md">Get In Touch</a>
-            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
             </button>
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
-             <a href="#about" class="block text-gray-600 hover:text-blue-600 transition duration-300 py-2">Who We Are</a>
-             <a href="#services" class="block text-gray-600 hover:text-blue-600 transition duration-300 py-2">Services</a>
-             <a href="#contact" class="block text-gray-600 hover:text-blue-600 transition duration-300 py-2">Contact</a>
-             <a href="#contact" class="block bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md text-center mt-2">Get In Touch</a>
+            <a href="#about" class="block text-gray-600 hover:text-blue-600 transition duration-300">Who We Are</a>
+            <a href="#services" class="block text-gray-600 hover:text-blue-600 transition duration-300">Services</a>
+            <a href="#testimonials" class="block text-gray-600 hover:text-blue-600 transition duration-300">Testimonials</a>
+            <a href="#contact" class="block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300 text-center">Get In Touch</a>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="relative hero-bg text-white min-h-[60vh] md:min-h-[80vh] flex items-center">
-            <div class="absolute inset-0 bg-black/60"></div>
-            <div class="container mx-auto px-6 text-center relative z-10">
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Everything you need in IT</h1>
-                <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Transform your business with expert IT consulting services.</p>
-                <a href="#contact" class="bg-blue-600 text-white font-bold px-8 py-4 rounded-lg hover:bg-blue-700 transition duration-300 shadow-lg text-lg">
-                    Get In Touch
-                </a>
+        <section class="hero-bg text-white min-h-[60vh] flex items-center">
+            <div class="bg-black bg-opacity-50 w-full h-full min-h-[60vh] flex items-center">
+                <div class="container mx-auto px-6 text-center">
+                    <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">Everything you need in IT</h1>
+                    <p class="text-lg md:text-xl mb-8">Transform your business with expert IT consulting services.</p>
+                    <a href="#contact" class="bg-blue-600 text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300">Get In Touch</a>
+                </div>
             </div>
         </section>
 
@@ -72,139 +61,68 @@
         <section id="about" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-gray-900">Who We Are</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Who We Are</h2>
                 </div>
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="space-y-8">
-                        <div>
-                            <h3 class="text-2xl font-semibold mb-3 text-blue-700">Our Story</h3>
-                            <p class="text-gray-600 leading-relaxed">At Rexit Inc, we have been providing IT consulting services to small businesses for over a decade. Our journey started with a passion for technology and a desire to help small businesses succeed. Today, we are proud to have helped numerous clients optimize their technology solutions and achieve their goals.</p>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-semibold mb-3 text-blue-700">Our Expertise</h3>
-                            <p class="text-gray-600 leading-relaxed">Our team of IT professionals has expertise in a wide range of technology solutions, including network design and implementation, cybersecurity, cloud solutions, and more. We stay up-to-date with the latest trends and best practices in the industry to provide our clients with the best possible solutions.</p>
-                        </div>
-                         <div>
-                            <h3 class="text-2xl font-semibold mb-3 text-blue-700">Our Clients</h3>
-                            <p class="text-gray-600 leading-relaxed">We work with a diverse range of small businesses across various industries, from startups to established companies. Our clients appreciate our personalized approach to IT consulting and our commitment to their success.</p>
-                        </div>
+                <div class="grid md:grid-cols-3 gap-12 text-center md:text-left">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-700">Our Story</h3>
+                        <p class="text-gray-600 leading-relaxed">At Rexit Inc, we have been providing IT consulting services to small businesses for over a decade. Our journey started with a passion for technology and a desire to help small businesses succeed. Today, we are proud to have helped numerous clients optimize their technology solutions and achieve their goals.</p>
                     </div>
-                    <div>
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Our Team" class="rounded-2xl shadow-2xl object-cover w-full h-full">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-700">Our Expertise</h3>
+                        <p class="text-gray-600 leading-relaxed">Our team of IT professionals has expertise in a wide range of technology solutions, including network design and implementation, cybersecurity, cloud solutions, and more. We stay up-to-date with the latest trends and best practices in the industry to provide our clients with the best possible solutions.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-700">Our Clients</h3>
+                        <p class="text-gray-600 leading-relaxed">We work with a diverse range of small businesses across various industries, from startups to established companies. Our clients appreciate our personalized approach to IT consulting and our commitment to their success.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services & Reviews Placeholder Section -->
-        <section id="services" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 text-center">
-                <div class="bg-white p-10 rounded-2xl shadow-lg">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Online Appointments</h3>
-                    <p class="text-gray-600">New services are coming soon!</p>
-                </div>
-                <div class="bg-white p-10 rounded-2xl shadow-lg">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">See What Our Clients Say</h3>
-                    <p class="text-gray-600">Reviews coming soon!</p>
-                </div>
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Online Appointments</h2>
+                 <p class="text-gray-600 text-lg">New services are coming soon!</p>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">See What Our Clients Say</h2>
+                 <p class="text-gray-600 text-lg">Reviews coming soon!</p>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-gray-900">Contact Us</h2>
-                </div>
-                <div class="grid lg:grid-cols-2 gap-12">
-                    <!-- Contact Form -->
-                    <div class="bg-gray-50 p-8 rounded-2xl shadow-lg">
-                        <h3 class="text-2xl font-semibold mb-6">Drop us a line!</h3>
-                        <form action="#" method="POST">
-                            <div class="mb-4">
-                                <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
-                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
-                            </div>
-                            <div class="mb-4">
-                                <label for="email" class="block text-gray-700 font-medium mb-2">Email*</label>
-                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
-                            </div>
-                             <div class="mb-6">
-                                <label for="attachment" class="block text-gray-700 font-medium mb-2">Attach Files</label>
-                                <div class="relative border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-blue-500 transition">
-                                    <input type="file" id="attachment" name="attachment" multiple class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
-                                    <p class="text-gray-500">Click to upload or drag and drop</p>
-                                    <p id="attachment-count" class="text-sm text-gray-600 mt-2">Attachments (0)</p>
-                                </div>
-                            </div>
-                            <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md">Send</button>
-                        </form>
-                        <p class="text-xs text-gray-500 mt-4 text-center">This site is protected by reCAPTCHA and the Google&nbsp;<a href="#" class="underline">Privacy Policy</a>&nbsp;and&nbsp;<a href="#" class="underline">Terms of Service</a>&nbsp;apply.</p>
-                    </div>
-
-                    <!-- Company Info -->
-                    <div class="space-y-8">
-                         <div>
-                            <h3 class="text-2xl font-semibold mb-4">Better yet, see us in person!</h3>
-                            <p class="text-gray-600 mb-4">We love our customers, so feel free to visit during normal business hours.</p>
-                            <p class="text-lg font-semibold">Rexit Inc</p>
-                            <!-- You can add address here -->
-                        </div>
-                        <div class="bg-gray-50 p-8 rounded-2xl shadow-lg">
-                            <h3 class="text-xl font-semibold mb-4">Hours</h3>
-                            <ul class="space-y-2 text-gray-600">
-                                <li class="flex justify-between"><span>Mon</span> <span>09:00 am – 05:00 pm</span></li>
-                                <li class="flex justify-between"><span>Tue</span> <span>09:00 am – 05:00 pm</span></li>
-                                <li class="flex justify-between"><span>Wed</span> <span>09:00 am – 05:00 pm</span></li>
-                                <li class="flex justify-between"><span>Thu</span> <span>09:00 am – 05:00 pm</span></li>
-                                <li class="flex justify-between"><span>Fri</span> <span>09:00 am – 05:00 pm</span></li>
-                                <li class="flex justify-between border-t pt-2 mt-2 border-gray-200"><span>Sat</span> <span>Closed</span></li>
-                                <li class="flex justify-between"><span>Sun</span> <span>Closed</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-         <!-- Subscription Section -->
-        <section class="bg-blue-700 text-white py-16">
+        <section id="contact" class="py-20 bg-gray-100">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold mb-2">Subscribe</h2>
-                <p class="mb-6">Get 10% off your first purchase when you sign up for our newsletter!</p>
-                <form class="max-w-md mx-auto">
-                    <div class="flex items-center">
-                        <input type="email" placeholder="Email" class="w-full px-4 py-3 rounded-l-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400">
-                        <button type="submit" class="bg-gray-900 text-white font-semibold px-6 py-3 rounded-r-lg hover:bg-gray-800 transition">Sign up</button>
-                    </div>
-                </form>
+                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Contact Us</h2>
+                 <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                     For all inquiries, please feel free to send us an email. We look forward to hearing from you!
+                 </p>
+                 <a href="mailto:rexitinc@gmail.com" class="mt-6 inline-block bg-blue-600 text-white py-3 px-6 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300">rexitinc@gmail.com</a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-6">
+    <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2025 Rexit Inc - All Rights Reserved.</p>
+            <p class="text-gray-400">&copy; 2025 Rexit Inc - All Rights Reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
+        // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-
-        // Update attachment count
-        const attachmentInput = document.getElementById('attachment');
-        const attachmentCount = document.getElementById('attachment-count');
-        attachmentInput.addEventListener('change', () => {
-            const files = attachmentInput.files;
-            attachmentCount.textContent = `Attachments (${files.length})`;
-        });
     </script>
-
 </body>
 </html>
+
